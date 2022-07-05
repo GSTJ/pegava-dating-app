@@ -83,6 +83,6 @@ If you already found a solution to your problem, **I would love to review your p
 
 This project was made in 2020, released publicly in 2022.
 
-The project is under the [MIT license](https://github.com/GSTJ/PegavaApp/master/LICENSE).
+The project is under the [The Creative Commons CC0 license](https://github.com/GSTJ/PegavaApp/master/LICENSE).
 
 Made with 💖 by [**Gabriel Taveira**](https://github.com/GSTJ) 🚀
