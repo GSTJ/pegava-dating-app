@@ -41,7 +41,7 @@ https://user-images.githubusercontent.com/50031755/177354327-32383e21-97ed-494d-
    Go to the main directory and install the necessary packages
 
    ```sh
-   cd Pegava/
+   cd PegavaDatingApp/
    yarn
    ```
 
