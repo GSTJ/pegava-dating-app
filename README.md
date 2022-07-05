@@ -59,11 +59,28 @@ https://user-images.githubusercontent.com/50031755/177354327-32383e21-97ed-494d-
 
 Pegava is supposed to be a dating app. I made it back at the pandemic's beginning but was never released. So I'm making it open source so the community can take a look and maybe use it better. I rapidly refactored it recently to make sure things are up to date after more than a year without updates.
 
+### 📲 Can I try the app?
+
+Yes! Simply download the Expo app and scan the QR code below:
+
+<a href="https://exp.host/@gstj/pegava">
+<img src="https://user-images.githubusercontent.com/50031755/177367465-47e90a23-e2a6-4db8-9519-8c60cb4fd558.svg" width="250" height="250"/>
+</a>
+
+More detailed instructions can be found here: https://exp.host/@gstj/pegava
+
 ### 👨‍🔬 What are the technologies used?
 
 Here are some of them:
 
-React Native, Typescript, React Native Reanimated, Redux and Styled-components
+- [Expo](https://expo.io/)
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
+- [React Redux](https://github.com/reduxjs/react-redux)
+- [Styled-components](https://github.com/styled-components/styled-components)
 
 # :tada: Contributing + :bug: Issues
 
