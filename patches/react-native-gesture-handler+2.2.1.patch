@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-gesture-handler/lib/typescript/handlers/gestureHandlerCommon.d.ts b/node_modules/react-native-gesture-handler/lib/typescript/handlers/gestureHandlerCommon.d.ts
+index 608a10f..086b464 100644
+--- a/node_modules/react-native-gesture-handler/lib/typescript/handlers/gestureHandlerCommon.d.ts
++++ b/node_modules/react-native-gesture-handler/lib/typescript/handlers/gestureHandlerCommon.d.ts
+@@ -55,6 +55,7 @@ export declare type BaseGestureHandlerProps<ExtraEventPayloadT extends Record<st
+     onEnded?: (event: HandlerStateChangeEvent) => void;
+     onGestureEvent?: (event: GestureEvent<ExtraEventPayloadT>) => void;
+     onHandlerStateChange?: (event: HandlerStateChangeEvent<ExtraEventPayloadT>) => void;
++    children?: React.ReactNode;
+ };
+ export declare function filterConfig(props: Record<string, unknown>, validProps: string[], defaults?: Record<string, unknown>): {
+     [x: string]: unknown;

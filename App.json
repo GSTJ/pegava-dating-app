@@ -1,0 +1,47 @@
+{
+  "displayName": "Pegava",
+  "expo": {
+    "name": "Pegava",
+    "description": "Aplicativo de relacionamento",
+    "scheme": "pegava",
+    "slug": "pegava",
+    "icon": "./src/assets/images/icon.png",
+    "orientation": "portrait",
+    "platforms": ["ios", "android"],
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#070F26",
+      "translucent": true
+    },
+    "splash": {
+      "image": "./src/assets/images/splash@3x.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#070F26",
+      "mdpi": "./src/assets/images/splash.png",
+      "xhdpi": "./src/assets/images/splash@2x.png",
+      "xxhdpi": "./src/assets/images/splash@3x.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#111D40"
+      },
+      "package": "br.com.pegava"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
+    }
+  }
+}
