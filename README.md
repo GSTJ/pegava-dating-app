@@ -1,10 +1,10 @@
 # <img src="https://user-images.githubusercontent.com/50031755/177243286-0a38a35c-a275-4653-b50d-4dc260aae920.svg" height="50"/>
 
 [![Author](https://img.shields.io/badge/author-GSTJ-F2C702?style=flat-square)](https://github.com/GSTJ)
-[![Languages](https://img.shields.io/github/languages/count/GSTJ/PegavaApp?color=%23F2C702&style=flat-square)](#)
-[![Stars](https://img.shields.io/github/stars/GSTJ/PegavaApp?color=F2C702&style=flat-square)](https://github.com/GSTJ/PegavaApp/stargazers)
-[![Forks](https://img.shields.io/github/forks/GSTJ/PegavaApp?color=%23F2C702&style=flat-square)](https://github.com/GSTJ/PegavaApp/network/members)
-[![Contributors](https://img.shields.io/github/contributors/GSTJ/PegavaApp?color=F2C702&style=flat-square)](https://github.com/GSTJ/PegavaApp/graphs/contributors)
+[![Languages](https://img.shields.io/github/languages/count/GSTJ/PegavaDatingApp?color=%23F2C702&style=flat-square)](#)
+[![Stars](https://img.shields.io/github/stars/GSTJ/PegavaDatingApp?color=F2C702&style=flat-square)](https://github.com/GSTJ/PegavaDatingApp/stargazers)
+[![Forks](https://img.shields.io/github/forks/GSTJ/PegavaDatingApp?color=%23F2C702&style=flat-square)](https://github.com/GSTJ/PegavaDatingApp/network/members)
+[![Contributors](https://img.shields.io/github/contributors/GSTJ/PegavaDatingApp?color=F2C702&style=flat-square)](https://github.com/GSTJ/PegavaDatingApp/graphs/contributors)
 
 > A place to get some love
 
@@ -32,9 +32,9 @@ https://user-images.githubusercontent.com/50031755/177354327-32383e21-97ed-494d-
 
 1. **Clone the repository**
 
-   Via HTTPS: `git clone https://github.com/GSTJ/PegavaApp.git`
+   Via HTTPS: `git clone https://github.com/GSTJ/PegavaDatingApp.git`
 
-   Via SSH: `git clone git@github.com:GSTJ/PegavaApp.git`
+   Via SSH: `git clone git@github.com:GSTJ/PegavaDatingApp.git`
 
 2. **Install the necessary packages.**
 
@@ -69,7 +69,7 @@ React Native, Typescript, React Native Reanimated, Redux and Styled-components
 
 They make the open-source community such a fantastic place to learn, inspire, and create. Any contributions you make are much appreciated.
 
-Feel free to **file a new issue** with a respective title and description on the [Pegava](https://github.com/GSTJ/PegavaApp/issues) repository.
+Feel free to **file a new issue** with a respective title and description on the [Pegava](https://github.com/GSTJ/PegavaDatingApp/issues) repository.
 
 If you already found a solution to your problem, **I would love to review your pull request**!
 
@@ -83,6 +83,6 @@ If you already found a solution to your problem, **I would love to review your p
 
 This project was made in 2020, released publicly in 2022.
 
-The project is under the [The Creative Commons CC0 license](https://github.com/GSTJ/PegavaApp/master/LICENSE).
+The project is under the [The Creative Commons CC0 license](https://github.com/GSTJ/PegavaDatingApp/master/LICENSE).
 
 Made with 💖 by [**Gabriel Taveira**](https://github.com/GSTJ) 🚀
