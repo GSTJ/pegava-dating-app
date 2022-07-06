@@ -30,7 +30,7 @@ export const ActionItem = styled.TouchableOpacity`
   elevation: 60;
 `;
 
-export const HeartEyesEmoji = styled.Image.attrs({
+export const ConfusedEmoji = styled.Image.attrs({
   source: confusedEmoji,
 })`
   width: 60px;
@@ -44,6 +44,6 @@ export const ThinkingEmoji = styled.Image.attrs({
   height: 43px;
 `;
 
-export const ConfusedEmoji = styled(HeartEyesEmoji).attrs({
+export const HeartEyesEmoji = styled(ConfusedEmoji).attrs({
   source: heartEyesEmoji,
 })``;
