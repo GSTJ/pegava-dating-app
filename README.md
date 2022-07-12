@@ -1,4 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/50031755/177243286-0a38a35c-a275-4653-b50d-4dc260aae920.svg" height="50"/>
+![Cover](https://user-images.githubusercontent.com/50031755/178378275-d3fd88c5-1a38-4b89-893e-0d2c1cc957b7.png)
 
 [![Author](https://img.shields.io/badge/author-GSTJ-F2C702?style=flat-square)](https://github.com/GSTJ)
 [![Languages](https://img.shields.io/github/languages/count/GSTJ/PegavaDatingApp?color=%23F2C702&style=flat-square)](#)
@@ -6,12 +6,12 @@
 [![Forks](https://img.shields.io/github/forks/GSTJ/PegavaDatingApp?color=%23F2C702&style=flat-square)](https://github.com/GSTJ/PegavaDatingApp/network/members)
 [![Contributors](https://img.shields.io/github/contributors/GSTJ/PegavaDatingApp?color=F2C702&style=flat-square)](https://github.com/GSTJ/PegavaDatingApp/graphs/contributors)
 
-> A place to get some love
-
 ---
 
-![Frame 48](https://user-images.githubusercontent.com/50031755/177244584-bbe76e07-d679-4d20-a9f5-84ece8a5dcd5.png)
-The full responsive design is located here: [Figma link](https://www.figma.com/file/olMKNbKwgVYDVQdDWqzFhR/Pegava?node-id=132%3A359)
+### Fully responsive design
+Posted publicly at the [Figma Community](https://www.figma.com/community/file/1128472053077012222)
+
+---
 
 ### **Videos**
 
