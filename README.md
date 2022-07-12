@@ -1,4 +1,4 @@
-![Cover](https://user-images.githubusercontent.com/50031755/178378275-d3fd88c5-1a38-4b89-893e-0d2c1cc957b7.png)
+![Cover](https://user-images.githubusercontent.com/50031755/178385492-ad9ae4c3-87fd-4710-94ad-3b6921aa10e8.png)
 
 [![Author](https://img.shields.io/badge/author-GSTJ-F2C702?style=flat-square)](https://github.com/GSTJ)
 [![Languages](https://img.shields.io/github/languages/count/GSTJ/PegavaDatingApp?color=%23F2C702&style=flat-square)](#)
