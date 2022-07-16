@@ -23,6 +23,7 @@ import { ThemeContext } from "styled-components";
 
 const CODE_LENGTH = 4;
 const INITIAL_TIMEOUT_IN_SECONDS = 50;
+const RESEND_TIMEOUT_IN_SECONDS = 50;
 
 const Authentication = () => {
   const [timer, setTimer] = useTimer(INITIAL_TIMEOUT_IN_SECONDS);
@@ -79,7 +80,7 @@ const Authentication = () => {
         style={{ bottom: insets.bottom + 15 }}
         disabled={!!timer}
         onPress={() => {
-          setTimer(50);
+          setTimer(RESEND_TIMEOUT_IN_SECONDS);
           setKeyboardInput("");
         }}
       >

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { BottomCard, Container, Description, TopCard } from "./styles";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -9,7 +9,6 @@ import HeroText from "./components/HeroText";
 import PhoneInput from "./components/PhoneInput";
 import { KeyboardAvoidingView, Platform } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useContext } from "react";
 import { ThemeContext } from "styled-components/native";
 import { SceneName } from "~src/@types/SceneName";
 
@@ -23,7 +22,7 @@ const Authentication = () => {
   const bottomInset = useCustomBottomInset();
   const themeContext = useContext(ThemeContext);
   const navigation = useNavigation();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   /**
    * For demo purposes, we'll just log the user in
