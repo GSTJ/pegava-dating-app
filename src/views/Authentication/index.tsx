@@ -22,7 +22,7 @@ const Authentication = () => {
   const bottomInset = useCustomBottomInset();
   const themeContext = useContext(ThemeContext);
   const navigation = useNavigation();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   /**
    * For demo purposes, we'll just log the user in
