@@ -3,11 +3,11 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 const useTimer = (
   seconds: number
 ): [number, Dispatch<SetStateAction<number>>] => {
-  const [timer, setTimer] = useState(seconds); //50
+  const [timer, setTimer] = useState(seconds);
 
   useEffect(() => {
     if (timer) {
-      const timer = setInterval(() => setTimer((count) => count - 20), 1000);
+      const timer = setInterval(() => setTimer((count) => count - 1), 1000);
       return () => clearInterval(timer);
     }
   }, [timer]);
