@@ -14,7 +14,6 @@ import {
 } from "./styles";
 import Placeholder from "~images/placeholder.svg";
 import AddRemove from "~images/AddRemove.svg";
-import { Button } from "~components";
 import Input from "~components/Input";
 import { DraggableGrid } from "react-native-draggable-grid";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -28,6 +27,7 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
 } from "react-native-reanimated";
+import Switcher from "~components/Switcher";
 
 const AddUserPhoto = ({ picture, onDelete, onAdd }) => {
   const themeContext = useContext(ThemeContext);
@@ -145,6 +145,8 @@ const EditProfile = ({ route }) => {
             maxLength={500}
             multiline
           />
+
+          <Switcher />
         </Container>
         <ContinueButton
           onPress={() =>
