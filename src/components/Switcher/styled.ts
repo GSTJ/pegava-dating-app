@@ -9,7 +9,7 @@ export const Container = styled.View`
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  padding: 15px 10px;
+  padding: 15px 15px;
   margin-top: 5px;
 `;
 
