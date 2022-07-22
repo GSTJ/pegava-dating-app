@@ -72,6 +72,7 @@ const EditProfile = ({ route }) => {
   const [name, setName] = useState("");
   const [bio, setBio] = useState("");
   const [pics, setPics] = useState(pictures);
+  const [gender, setGender] = useState("");
 
   // Swipe gestures need to be disabled when Draggable is active,
   // othewise the user will perform multiple gestures and the behavior
@@ -146,7 +147,17 @@ const EditProfile = ({ route }) => {
             multiline
           />
 
-          <Switcher />
+          <Switcher
+            title="Sexo"
+            data={["Homem", "Mulher", "Outro"]}
+            onSelected={setGender}
+          />
+
+          <Switcher
+            title="Mostrar-me"
+            data={["Homem", "Mulher", "Todos"]}
+            onSelected={setGender}
+          />
         </Container>
         <ContinueButton
           onPress={() =>
