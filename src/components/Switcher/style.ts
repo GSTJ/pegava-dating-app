@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components/native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Text from "~components/Text";
 
 interface OptionButtonProps {
   marked?: boolean;
@@ -9,7 +10,7 @@ export const Container = styled.View`
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  padding: 15px 15px;
+  padding: 15px 0px;
   margin-top: 5px;
 `;
 
@@ -32,10 +33,8 @@ export const OptionButton = styled.TouchableOpacity<OptionButtonProps>`
 
 `;
 
-export const TextButton = styled.Text<OptionButtonProps>`
+export const TextButton = styled(Text)<OptionButtonProps>`
   color: ${props => props.theme.colors.primary};
-  font-weight: 800;
-  font-size: 16px;
 
   ${props => {
     if(props?.marked) {
