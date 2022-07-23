@@ -14,7 +14,6 @@ import {
 } from "./styles";
 import Placeholder from "~images/placeholder.svg";
 import AddRemove from "~images/AddRemove.svg";
-import Input from "~components/Input";
 import { DraggableGrid } from "react-native-draggable-grid";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
@@ -22,12 +21,12 @@ import { pictures, sortByUrl, deleteUrlFromItem, addUrlToItem } from "./utils";
 import { useHeaderHeight } from "@react-navigation/elements";
 import { SceneName } from "~src/@types/SceneName";
 import { useDidMountEffect } from "~services/utils";
+import { Input, RadioButtons } from "~components";
 import { useNavbarStyle } from "~components/Navbar";
 import Animated, {
   useAnimatedStyle,
   withSpring,
 } from "react-native-reanimated";
-import Switcher from "~components/Switcher";
 
 const AddUserPhoto = ({ picture, onDelete, onAdd }) => {
   const themeContext = useContext(ThemeContext);
@@ -73,7 +72,7 @@ const EditProfile = ({ route }) => {
   const [bio, setBio] = useState("");
   const [pics, setPics] = useState(pictures);
   const [gender, setGender] = useState("");
-  const [showUserTo, setShowUserTo] = useState("");
+  const [genderOfInterest, setGenderOfInterest] = useState("");
 
   // Swipe gestures need to be disabled when Draggable is active,
   // othewise the user will perform multiple gestures and the behavior
@@ -147,19 +146,17 @@ const EditProfile = ({ route }) => {
             maxLength={500}
             multiline
           />
-
-          <Switcher
+          <RadioButtons
             title="Sexo"
             data={["Homem", "Mulher", "Outro"]}
             value={gender}
             onChange={setGender}
           />
-
-          <Switcher
+          <RadioButtons
             title="Mostrar-me"
             data={["Homem", "Mulher", "Todos"]}
-            value={showUserTo}
-            onChange={setShowUserTo}
+            value={genderOfInterest}
+            onChange={setGenderOfInterest}
           />
         </Container>
         <ContinueButton
