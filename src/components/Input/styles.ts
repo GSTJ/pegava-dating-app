@@ -9,7 +9,7 @@ export const Content = styled.View`
   background: ${(props) => props.theme.colors.secondaryBackground};
   border-radius: 15px;
   padding: 15px 0 15px 15px;
-  margin-top: 5px;
+  margin-top: 20px;
 `;
 
 export const TextInput = styled.TextInput.attrs((props) => ({
