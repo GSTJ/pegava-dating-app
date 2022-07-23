@@ -50,6 +50,9 @@ export const UserPictureContainer = styled.View`
 export const ContinueButton = styled(Button)`
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+  border-width: 0px;
+  border-top-width: 1px;
+  border-color: ${(props) => props.theme.colors.background};
 `;
 
 export const BottomPadding = styled.View`
