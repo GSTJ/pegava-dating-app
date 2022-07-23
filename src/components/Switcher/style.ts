@@ -1,5 +1,4 @@
 import styled, {css} from "styled-components/native";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import Text from "~components/Text";
 
 interface OptionButtonProps {
@@ -7,10 +6,11 @@ interface OptionButtonProps {
 }
 
 export const Container = styled.View`
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-grow: 1;
   align-items: center;
   flex-direction: row;
-  padding: 15px 0px;
+  padding: 15px 15px;
   margin-top: 5px;
 `;
 
