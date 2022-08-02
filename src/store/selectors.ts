@@ -6,7 +6,8 @@ export const getCards = createSelector(
   (request) => request.data
 );
 
-const getLastCardId = (state: RootReducer) => state.users.config.lastCardId;
+export const getLastCardId = (state: RootReducer) =>
+  state.users.config.lastCardId;
 
 export const getActiveCards = createSelector(
   getCards,

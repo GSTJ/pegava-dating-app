@@ -113,6 +113,13 @@ export const useSwipeGesture = ({
     y: useSharedValue(0),
   };
 
+  // We want to guarantee the animation has finished before enabling
+  // the card to be swiped again. Otherwise the user will be able
+  // to 'catch' the card on the middle of the animation.
+  const safelyEnableWithDelay = (duration: number) => {
+    setTimeout(() => setEnabled(true), duration);
+  };
+
   const gotoDirection = (
     swipeDirection: Swipe,
     animationConfig = { duration: 250 }
@@ -127,7 +134,10 @@ export const useSwipeGesture = ({
     return gotoCoordinate(
       translation,
       swipeCoordinates,
-      () => runOnJS(onSwipeComplete)(swipeDirection),
+      () => {
+        runOnJS(onSwipeComplete)(swipeDirection);
+        runOnJS(safelyEnableWithDelay)(animationConfig.duration);
+      },
       animationConfig
     );
   };
