@@ -1,5 +1,5 @@
 import produce from "immer";
-import { createAsyncAction } from "typesafe-actions";
+import { createAction, createAsyncAction } from "typesafe-actions";
 import { ActionType, createReducer } from "typesafe-actions";
 import { Swipe } from "~views/Swipe/components/SwipeHandler/hooks/useSwipeGesture";
 
@@ -21,9 +21,11 @@ export enum Types {
   SWIPE_USER_REQUEST = "SWIPE_USER_REQUEST",
   SWIPE_USER_SUCCESS = "SWIPE_USER_SUCCESS",
   SWIPE_USER_FAILURE = "SWIPE_USER_FAILURE",
+
+  SWIPE_BACK = "SWIPE_BACK",
 }
 
-export const Actions = createAsyncAction(
+const asyncActions = createAsyncAction(
   Types.SWIPE_USER_REQUEST,
   Types.SWIPE_USER_SUCCESS,
   Types.SWIPE_USER_FAILURE
@@ -32,6 +34,10 @@ export const Actions = createAsyncAction(
   { id: number },
   { id: number; message: string }
 >();
+
+const swipeBack = createAction(Types.SWIPE_BACK)();
+
+export const Actions = { ...asyncActions, swipeBack };
 
 const swipeUserRequest = (
   state = initialState,
@@ -54,6 +60,15 @@ const swipeUserRequest = (
     return draft;
   });
 
+const swipeBackHandler = (state = initialState) =>
+  produce(state, (draft) => {
+    draft.config.lastCardId = null;
+
+    return draft;
+  });
+
 export default createReducer<typeof initialState, ActionType<typeof Actions>>(
   initialState
-).handleAction(Actions.request, swipeUserRequest);
+)
+  .handleAction(Actions.request, swipeUserRequest)
+  .handleAction(Actions.swipeBack, swipeBackHandler);

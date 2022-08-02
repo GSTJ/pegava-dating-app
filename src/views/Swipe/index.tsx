@@ -1,15 +1,16 @@
 import React from "react";
 import { Container } from "./styles";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import SwipeHandler, { swipeHandlerRef } from "./components/SwipeHandler";
 import { StatusBar } from "expo-status-bar";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components/native";
-import { Swipe } from "./components/SwipeHandler/hooks/useSwipeGesture";
 import { useSelector } from "react-redux";
 import { getCards, getCurrentCardId } from "~store/selectors";
-import SwipeRequestFeedback from "~views/Swipe/components/SwipeRequestFeedback";
 import { MatchActionBar } from "~components";
+import { Swipe } from "./components/SwipeHandler/hooks/useSwipeGesture";
+import SwipeHandler, { swipeHandlerRef } from "./components/SwipeHandler";
+import SwipeRequestFeedback from "./components/SwipeRequestFeedback";
+import SwipeBackButton from "./components/SwipeBackButton";
 
 export const useCustomBottomInset = () => {
   const insets = useSafeAreaInsets();
@@ -44,6 +45,7 @@ const Matches = () => {
     <Container style={{ marginBottom: bottomInset }}>
       <StatusBar style={themeContext.dark ? "light" : "dark"} />
       <Container>
+        <SwipeBackButton />
         <SwipeRequestFeedback />
         {cards?.map(SwipeHandlerWrapper).reverse()}
       </Container>
