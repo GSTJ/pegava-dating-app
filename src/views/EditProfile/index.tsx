@@ -86,6 +86,8 @@ const EditProfile = ({ route }) => {
     navigation.setOptions({ swipeEnabled: gesturesEnabled });
   }, [gesturesEnabled]);
 
+  const continueButtonDisabled = Boolean(!genderOfInterest || !gender);
+
   return (
     <>
       <KeyboardAvoidingView
@@ -160,6 +162,7 @@ const EditProfile = ({ route }) => {
           />
         </Container>
         <ContinueButton
+          disabled={continueButtonDisabled}
           onPress={() =>
             navigation.navigate(SceneName.Main, { screen: SceneName.Swipe })
           }
@@ -167,7 +170,10 @@ const EditProfile = ({ route }) => {
           Salvar perfil
         </ContinueButton>
       </KeyboardAvoidingView>
-      <BottomPadding style={{ height: insets.bottom }} />
+      <BottomPadding
+        disabled={continueButtonDisabled}
+        style={{ height: insets.bottom }}
+      />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 import { Button } from "~components";
 import { width } from "~constants";
 
@@ -53,8 +53,24 @@ export const ContinueButton = styled(Button)`
   border-width: 0px;
   border-top-width: 1px;
   border-color: ${(props) => props.theme.colors.background};
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      opacity: 0.5;
+    `}
 `;
 
-export const BottomPadding = styled.View`
+interface BottomPaddingProps {
+  disabled?: boolean;
+}
+
+export const BottomPadding = styled.View<BottomPaddingProps>`
   background-color: ${(props) => props.theme.colors.primary};
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      opacity: 0.5;
+    `}
 `;
