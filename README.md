@@ -17,9 +17,11 @@ Posted publicly at the [Figma Community](https://www.figma.com/community/file/11
 
 _(Themes are according to system preferences)_
 
-https://user-images.githubusercontent.com/50031755/177354337-9e3e6b74-7059-419f-9ae2-333d22203c9a.mp4
 
-https://user-images.githubusercontent.com/50031755/177354327-32383e21-97ed-494d-ba46-539f62e702a3.mp4
+https://user-images.githubusercontent.com/50031755/182279278-cc84c43f-35f1-44bc-affd-354a1bb4ec21.mp4
+
+https://user-images.githubusercontent.com/50031755/182279427-2f190d81-1b98-4e3f-b1c3-7ef8489ccf2a.mp4
+
 
 # :pushpin: Table of Contents
 
