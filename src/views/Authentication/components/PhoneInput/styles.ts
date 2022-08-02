@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components/native";
 import { StyleSheet } from "react-native";
+import Color from "color";
 
 const fontStyle = css`
   font-family: ${(props) => props.theme.typography.fontFamily.bold};
@@ -15,7 +16,9 @@ export const Container = styled.View`
   margin: 25px 0;
 `;
 
-export const TextInput = styled.TextInput`
+export const TextInput = styled.TextInput.attrs((props) => ({
+  placeholderTextColor: Color(props.theme.colors.text).fade(0.5).rgb().string(),
+}))`
   padding: 20px 15px;
   flex: 1;
   ${fontStyle}
