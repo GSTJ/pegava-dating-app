@@ -11,7 +11,7 @@
     "@use-expo/font": "^2.0.0",
     "axios": "^0.27.2",
     "color": "^4.2.3",
-    "expo": "^48.0.0",
+    "expo": "~48.0.21",
     "expo-blur": "~12.2.2",
     "expo-font": "~11.1.1",
     "expo-linear-gradient": "~12.1.2",
@@ -26,7 +26,7 @@
     "react": "18.2.0",
     "react-content-loader": "^6.0.3",
     "react-dom": "18.2.0",
-    "react-native": "0.71.3",
+    "react-native": "0.71.14",
     "react-native-appearance": "~0.3.3",
     "react-native-draggable-grid": "^2.1.3",
     "react-native-error-boundary": "^1.1.9",
@@ -70,11 +70,13 @@
     "typescript-styled-plugin": "^0.18.2"
   },
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "eject": "expo eject",
     "prepare": "patch-package"
   },
-  "private": true
+  "private": true,
+  "name": "pegava-dating-app",
+  "version": "1.0.0"
 }
