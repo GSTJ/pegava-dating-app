@@ -17,6 +17,7 @@ import SwipeView from "~views/Swipe";
 import EditProfileView from "~views/EditProfile";
 import MessagesView from "~views/Messages";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { useTranslation } from "react-i18next";
 
 import Logo from "~images/Logo.svg";
 import Messages from "~images/Messages.svg";
@@ -74,13 +75,14 @@ const Tabs = () => {
 
 function Router() {
   const theme = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     <Stack.Navigator
       initialRouteName={SceneName.Authentication}
       screenOptions={{
         headerShown: false,
-        headerBackTitle: "Voltar",
+        headerBackTitle: t('common.backTitle'),
         headerTitleAlign: "center",
         headerStyle: {
           backgroundColor: theme.colors.background,
@@ -99,7 +101,7 @@ function Router() {
         <Stack.Screen
           name={SceneName.EditProfile}
           options={{
-            headerTitle: "Crie seu perfil",
+            headerTitle: t('common.createProfile'),
             headerShown: true,
             headerStyleInterpolator: HeaderStyleInterpolators.forUIKit,
           }}

@@ -1,10 +1,22 @@
 {
-    "auth": {
-      "enter": "Insira seu",
-      "phone": "celular",
-      "instruction": "Vamos enviar um código de 4 dígitos para autorizar sua conta. Se ainda não tem uma, vamos criá-la.",
-      "placeholder": "(99) 99999-9999",
-      "continue": "Continuar"
+    "editProfile": {
+      "nameTitle": "Mi nombre",
+      "namePlaceholder": "¿Cómo te gustaría que te presentáramos?",
+      "bioTitle": "Sobre mí",
+      "bioPlaceholder": "Cuéntanos algo genial sobre ti",
+      "genderTitle": "Género",
+      "male": "Hombre",
+      "female": "Mujer",
+      "other": "Otro",
+      "interestTitle": "Mostrarme",
+      "interestMale": "Hombres",
+      "interestFemale": "Mujeres",
+      "interestAll": "Todos",
+      "saveButton": "Guardar perfil"
+    },
+    "common": {
+      "backTitle": "Volver",
+      "createProfile": "Crear perfil"
     }
   }
   

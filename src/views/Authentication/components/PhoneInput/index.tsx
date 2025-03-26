@@ -8,8 +8,10 @@ import {
 } from "./styles";
 import { MaskService } from "react-native-masked-text";
 import { TextInputProps } from "react-native";
+import { useTranslation } from 'react-i18next';
 
 const PhoneInput: React.FC<TextInputProps> = (props) => {
+  const { t } = useTranslation();
   const [phoneNumber, setPhoneNumber] = useState("");
 
   const formatPhone = useCallback((tel: string) => {
@@ -28,6 +30,7 @@ const PhoneInput: React.FC<TextInputProps> = (props) => {
         textContentType="telephoneNumber"
         value={phoneNumber}
         onChangeText={formatPhone}
+        placeholder={props.placeholder || t('auth.placeholder')}
         {...(props as any)}
       />
     </Container>

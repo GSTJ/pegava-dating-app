@@ -4,10 +4,12 @@ import * as RNLocalize from 'react-native-localize';
 
 import en from './locales/en.json';
 import es from './locales/es.json';
+import pt from './locales/pt.json';
 
 const resources = {
   en: { translation: en },
   es: { translation: es },
+  pt: { translation: pt }
 };
 
 const fallback = 'en';

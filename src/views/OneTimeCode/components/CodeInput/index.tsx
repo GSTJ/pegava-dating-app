@@ -6,6 +6,8 @@ import {
   ICodeInputNumber,
   InputNumberContainer,
 } from "./styles";
+import { useTranslation } from 'react-i18next';
+
 interface ICodeInput {
   value: string;
   length: number;
@@ -32,10 +34,11 @@ const CodeInputNumber: React.FC<ICodeInputNumber & { children: string }> = ({
 };
 
 const CodeInput: React.FC<ICodeInput> = ({ value, length }) => {
+  const { t } = useTranslation();
   const oneTimeCode = value.padEnd(length, "0");
 
   return (
-    <Container>
+    <Container aria-label={t('oneTimeCode.codeInput')}>
       {oneTimeCode.split("").map((character, index) => (
         <CodeInputNumber
           key={index}

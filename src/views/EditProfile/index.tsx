@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { StatusBar } from "expo-status-bar";
 import { KeyboardAvoidingView, Platform, View } from "react-native";
 import { ThemeContext } from "styled-components/native";
@@ -30,6 +31,8 @@ import Animated, {
 
 const AddUserPhoto = ({ picture, onDelete, onAdd }) => {
   const themeContext = useContext(ThemeContext);
+  const { t } = useTranslation();
+
 
   const hasPicture = !!picture.url;
 
@@ -88,6 +91,8 @@ const EditProfile = ({ route }) => {
 
   const continueButtonDisabled = Boolean(!genderOfInterest || !gender);
 
+  const { t } = useTranslation();
+
   return (
     <>
       <KeyboardAvoidingView
@@ -133,33 +138,33 @@ const EditProfile = ({ route }) => {
               setPics(newPics);
             }}
           />
-          <Input
-            title="Meu nome"
-            placeholder="Como gostaria que te apresentássemos?"
-            value={name}
-            onChangeText={setName}
-            maxLength={50}
-          />
-          <Input
-            title="Sobre mim"
-            placeholder="Conte alguma coisa legal sobre você"
-            value={bio}
-            onChangeText={setBio}
-            maxLength={500}
-            multiline
-          />
-          <RadioButtons
-            title="Sexo"
-            data={["Homem", "Mulher", "Outro"]}
-            value={gender}
-            onChange={setGender}
-          />
-          <RadioButtons
-            title="Mostrar-me"
-            data={["Homem", "Mulher", "Todos"]}
-            value={genderOfInterest}
-            onChange={setGenderOfInterest}
-          />
+        <Input
+          title={t('editProfile.nameTitle')}
+          placeholder={t('editProfile.namePlaceholder')}
+          value={name}
+          onChangeText={setName}
+          maxLength={50}
+        />
+        <Input
+          title={t('editProfile.bioTitle')}
+          placeholder={t('editProfile.bioPlaceholder')}
+          value={bio}
+          onChangeText={setBio}
+          maxLength={500}
+          multiline
+        />
+        <RadioButtons
+          title={t('editProfile.genderTitle')}
+          data={[t('editProfile.male'), t('editProfile.female'), t('editProfile.other')]}
+          value={gender}
+          onChange={setGender}
+        />
+        <RadioButtons
+          title={t('editProfile.interestTitle')}
+          data={[t('editProfile.interestMale'), t('editProfile.interestFemale'), t('editProfile.interestAll')]}
+          value={genderOfInterest}
+          onChange={setGenderOfInterest}
+        />
         </Container>
         <ContinueButton
           disabled={continueButtonDisabled}
@@ -167,7 +172,7 @@ const EditProfile = ({ route }) => {
             navigation.navigate(SceneName.Main, { screen: SceneName.Swipe })
           }
         >
-          Salvar perfil
+          {t('editProfile.saveButton')}
         </ContinueButton>
       </KeyboardAvoidingView>
       <BottomPadding

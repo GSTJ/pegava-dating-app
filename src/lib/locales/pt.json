@@ -1,0 +1,22 @@
+{
+    "editProfile": {
+      "nameTitle": "Meu nome",
+      "namePlaceholder": "Como gostaria que te apresentássemos?",
+      "bioTitle": "Sobre mim",
+      "bioPlaceholder": "Conte alguma coisa legal sobre você",
+      "genderTitle": "Sexo",
+      "male": "Homem",
+      "female": "Mulher",
+      "other": "Outro",
+      "interestTitle": "Mostrar-me",
+      "interestMale": "Homem",
+      "interestFemale": "Mulher",
+      "interestAll": "Todos",
+      "saveButton": "Salvar perfil"
+    },
+    "common": {
+      "backTitle": "Voltar",
+      "createProfile": "Crie seu perfil"
+    }
+  }
+  

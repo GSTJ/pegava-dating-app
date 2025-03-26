@@ -1,10 +1,39 @@
 {
+    "common": {
+      "back": "Back",
+      "continue": "Continue",
+      "save": "Save",
+      "cancel": "Cancel",
+      "backTitle": "Back",
+      "createProfile": "Create profile"
+    },
     "auth": {
       "enter": "Enter your",
       "phone": "phone number",
-      "instruction": "We'll send a 4-digit code to verify your account. If you don't have one, we'll create it.",
-      "placeholder": "(999) 999-9999",
+      "instruction": "We'll send you a code to verify your number",
+      "placeholder": "Enter phone number",
       "continue": "Continue"
+    },
+    "oneTimeCode": {
+      "title": "Verification code",
+      "description": "Enter the code we sent to your phone",
+      "resend": "Resend code",
+      "timer": "Resend code in {{seconds}}s"
+    },
+    "editProfile": {
+      "nameTitle": "My name",
+      "namePlaceholder": "How would you like to be introduced?",
+      "bioTitle": "About me",
+      "bioPlaceholder": "Tell us something cool about yourself",
+      "genderTitle": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "interestTitle": "Show me",
+      "interestMale": "Men",
+      "interestFemale": "Women",
+      "interestAll": "Everyone",
+      "saveButton": "Save profile"
     }
   }
   

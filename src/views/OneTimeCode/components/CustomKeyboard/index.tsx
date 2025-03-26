@@ -8,6 +8,7 @@ import {
   CustomKey,
 } from "./styles";
 import { ThemeContext } from "styled-components/native";
+import { useTranslation } from 'react-i18next';
 
 enum KeyTypes {
   Digit = "Digit",
@@ -29,16 +30,17 @@ const makeDigit = (digit: number): IKey => ({
     <KeyContainer {...props}>
       <KeyContent>{digit}</KeyContent>
     </KeyContainer>
-  ),
+  )
 });
 
 const BackspaceKeyComponent = (props: TouchableOpacityProps) => {
+  const { t } = useTranslation();
   const themeContext = useContext(ThemeContext);
 
   return (
     <KeyContainer {...props}>
       <CustomKey>
-        <Erase fill={themeContext.colors.text} />
+        <Erase fill={themeContext.colors.text} aria-label={t('common.delete')} />
       </CustomKey>
     </KeyContainer>
   );
@@ -65,6 +67,9 @@ const keys: IKey[] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   .concat([EmptyKey, makeDigit(0), BackspaceKey]);
 
 const CustomKeyboard = ({ onInsert, onDelete }) => {
+  const { t } = useTranslation();
+  const themeContext = useContext(ThemeContext);
+
   const renderKey = useCallback(
     (item) => {
       const KeyComponent = item.render;

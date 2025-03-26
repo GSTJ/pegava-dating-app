@@ -20,16 +20,18 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { SceneName } from "~src/@types/SceneName";
 import moment from "moment";
 import { ThemeContext } from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const CODE_LENGTH = 4;
 const INITIAL_TIMEOUT_IN_SECONDS = 50;
 const RESEND_TIMEOUT_IN_SECONDS = 50;
 
-const Authentication = () => {
+const OneTimeCode = () => {
   const [timer, setTimer] = useTimer(INITIAL_TIMEOUT_IN_SECONDS);
   const themeContext = useContext(ThemeContext);
   const insets = useSafeAreaInsets();
   const [keyboardInput, setKeyboardInput] = useState("");
+  const { t } = useTranslation();
 
   const formattedTime = moment().minutes(0).seconds(timer).format("mm:ss");
 
@@ -46,35 +48,36 @@ const Authentication = () => {
     }
   }, [keyboardInput]);
 
+  const handleInsert = (num: string) => {
+    if (keyboardInput.length >= CODE_LENGTH) return;
+    setKeyboardInput(keyboardInput + num);
+  };
+
+  const handleDelete = () => {
+    setKeyboardInput(keyboardInput.slice(0, -1));
+  };
+
   return (
     <Container>
-      <Content
-        style={{
-          paddingTop: insetTop,
-          paddingBottom: insets.bottom,
-          paddingLeft: insets.left + 5,
-          paddingRight: insets.right + 5,
-        }}
-      >
-        <StatusBar style={themeContext.dark ? "light" : "dark"} />
+      <StatusBar style={themeContext.dark ? "light" : "dark"} />
+      <GoBack />
+      <Content>
         <TopColumn>
-          <Timer>{formattedTime}</Timer>
-          <Description>
-            Insira o código de verificação que te enviamos
-          </Description>
-          <CodeInput value={keyboardInput} length={CODE_LENGTH} />
+          <Text fontSize="h2" fontWeight="bold">
+            {t('oneTimeCode.title')}
+          </Text>
+          <Description>{t('oneTimeCode.description')}</Description>
         </TopColumn>
-        <CustomKeyboard
-          onInsert={(num) => {
-            if (keyboardInput.length >= CODE_LENGTH) return;
-            setKeyboardInput(keyboardInput + num);
-          }}
-          onDelete={() => setKeyboardInput(keyboardInput.slice(0, -1))}
-        />
+        <CodeInput value={keyboardInput} length={CODE_LENGTH} />
+        {!!timer && (
+          <Timer>
+            {t('oneTimeCode.timer', { seconds: timer })}
+          </Timer>
+        )}
       </Content>
-      <GoBack
-        style={{ top: insetTop, left: insets.left + 25 }}
-        onPress={navigation.goBack}
+      <CustomKeyboard
+        onInsert={handleInsert}
+        onDelete={handleDelete}
       />
       <ResendCode
         style={{ bottom: insets.bottom + 15 }}
@@ -86,7 +89,7 @@ const Authentication = () => {
       >
         <Underline>
           <Text fontSize="large" fontWeight="bold">
-            Reenviar o código
+            {t('oneTimeCode.resend')}
           </Text>
         </Underline>
       </ResendCode>
@@ -94,4 +97,4 @@ const Authentication = () => {
   );
 };
 
-export default Authentication;
+export default OneTimeCode;
