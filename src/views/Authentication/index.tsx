@@ -11,6 +11,7 @@ import { KeyboardAvoidingView, Platform } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ThemeContext } from "styled-components/native";
 import { SceneName } from "~src/@types/SceneName";
+import { useTranslation } from 'react-i18next';
 
 export const useCustomBottomInset = () => {
   const insets = useSafeAreaInsets();
@@ -23,6 +24,7 @@ const Authentication = () => {
   const themeContext = useContext(ThemeContext);
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   /**
    * For demo purposes, we'll just log the user in
@@ -59,23 +61,18 @@ const Authentication = () => {
           <HeroText />
         </TopCard>
         <BottomCard style={{ paddingBottom: bottomInset }}>
-          <Title>
-            Insira seu <Highlight>celular</Highlight>
-          </Title>
-          <Description>
-            Vamos enviar um código de 4 digitos para autorizar sua conta. Se
-            ainda não tem uma, vamos cria-la
-          </Description>
-          <PhoneInput
-            enablesReturnKeyAutomatically
-            returnKeyType="send"
-            onSubmitEditing={handleLogin}
-            blurOnSubmit={false}
-            placeholder="(99) 99999-9999"
-          />
-          <Button loading={loading} onPress={handleLogin}>
-            Continuar
-          </Button>
+        <Title>
+          {t('auth.enter')} <Highlight>{t('auth.phone')}</Highlight>
+        </Title>
+        <Description>
+          {t('auth.instruction')}
+        </Description>
+        <PhoneInput
+          placeholder={t('auth.placeholder')}
+        />
+        <Button loading={loading} onPress={handleLogin}>
+          {t('auth.continue')}
+        </Button>
         </BottomCard>
       </KeyboardAvoidingView>
     </Container>

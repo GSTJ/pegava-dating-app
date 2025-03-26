@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import { registerRootComponent } from "expo";
+import "./lib/i18n";
 import { useFonts } from "@use-expo/font";
 import { DefaultTheme, Font, LightTheme, DarkTheme } from "./themes";
 import { ThemeProvider } from "styled-components/native";
@@ -15,6 +16,7 @@ import { enableScreens } from "react-native-screens";
 import { useColorScheme } from "react-native";
 import { useDidMountEffect } from "~services/utils";
 import * as SplashScreen from "expo-splash-screen";
+
 
 LogBox.ignoreLogs([
   "ViewPropTypes will be removed from React Native. Migrate to ViewPropTypes exported from 'deprecated-react-native-prop-types'.",

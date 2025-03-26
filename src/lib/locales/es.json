@@ -1,0 +1,10 @@
+{
+    "auth": {
+      "enter": "Insira seu",
+      "phone": "celular",
+      "instruction": "Vamos enviar um código de 4 dígitos para autorizar sua conta. Se ainda não tem uma, vamos criá-la.",
+      "placeholder": "(99) 99999-9999",
+      "continue": "Continuar"
+    }
+  }
+  

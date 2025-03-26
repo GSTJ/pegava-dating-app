@@ -1,0 +1,10 @@
+{
+    "auth": {
+      "enter": "Enter your",
+      "phone": "phone number",
+      "instruction": "We'll send a 4-digit code to verify your account. If you don't have one, we'll create it.",
+      "placeholder": "(999) 999-9999",
+      "continue": "Continue"
+    }
+  }
+  
