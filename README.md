@@ -7,6 +7,10 @@
 [![Contributors](https://img.shields.io/github/contributors/GSTJ/PegavaDatingApp?color=F2C702&style=flat-square)](https://github.com/GSTJ/PegavaDatingApp/graphs/contributors)
 
 ---
+> [!WARNING]  
+Want a production-ready version of this example repository? Check out [Pegada](https://github.com/GSTJ/pegada)
+
+---
 
 ### Fully responsive design
 Posted publicly at the [Figma Community](https://www.figma.com/community/file/1128472053077012222)
