@@ -54,7 +54,7 @@
     "typesafe-actions": "^5.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
+    "@babel/core": "^7.29.6",
     "@types/color": "^3.0.1",
     "@types/lodash": "^4.14.170",
     "@types/react": "~18.0.27",
