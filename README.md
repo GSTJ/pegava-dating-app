@@ -7,8 +7,13 @@
 [![Contributors](https://img.shields.io/github/contributors/GSTJ/PegavaDatingApp?color=F2C702&style=flat-square)](https://github.com/GSTJ/PegavaDatingApp/graphs/contributors)
 
 ---
-> [!WARNING]  
-Want a production-ready version of this example repository? Check out [Pegada](https://github.com/GSTJ/pegada)
+
+> [!IMPORTANT]
+> **This repo is archived and no longer maintained.** It's on Expo SDK 48, so it won't open in a current Expo Go.
+>
+> The maintained successor is **[Pegada](https://github.com/GSTJ/pegada)** ([pegada.app](https://www.pegada.app/)), built with Expo and Next.js. Start there if you want something that actually runs.
+>
+> Everything below still works fine as a reference, and the [Figma design](https://www.figma.com/community/file/1128472053077012222) is free to use.
 
 ---
 
