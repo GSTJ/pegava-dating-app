@@ -113,4 +113,17 @@ This project was made in 2020, released publicly in 2022.
 
 The project is under the [The Creative Commons CC0 license](https://github.com/GSTJ/PegavaDatingApp/master/LICENSE).
 
-Made with 💖 by [**Gabriel Taveira**](https://github.com/GSTJ) 🚀
+## More from the author
+
+Made by [Gabriel Taveira](https://www.gabrieltaveira.dev), who also built:
+
+<table>
+  <tr>
+    <td width="64"><a href="https://curvinha.app/?utm_source=pegava-dating-app&utm_medium=readme"><img src="https://curvinha.app/assets/apple-touch-icon.png" width="48" height="48" alt="Curvinha icon"></a></td>
+    <td><a href="https://curvinha.app/?utm_source=pegava-dating-app&utm_medium=readme"><b>Curvinha</b></a>: interior design for iPhone. Show your room and get a 3D proposal with real furniture from Brazilian stores. <a href="https://apps.apple.com/br/app/id6816957870?pt=126480814&ct=pegava-dating-app-readme">App Store</a></td>
+  </tr>
+  <tr>
+    <td width="64"><a href="https://pegada.app/?utm_source=pegava-dating-app&utm_medium=readme"><img src="https://pegada.app/apple-touch-icon.png" width="48" height="48" alt="Pegada icon"></a></td>
+    <td><a href="https://pegada.app/?utm_source=pegava-dating-app&utm_medium=readme"><b>Pegada</b></a>: a new friend for your dog, nearby. This repo is where it started; the live app is <a href="https://github.com/GSTJ/pegada">GSTJ/pegada</a>. <a href="https://apps.apple.com/br/app/id6450865592?pt=126480814&ct=pegava-dating-app-readme">App Store</a></td>
+  </tr>
+</table>
